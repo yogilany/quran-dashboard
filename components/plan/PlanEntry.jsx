@@ -58,10 +58,10 @@ if(res.status==200){
     const toData = getSurahInfo(day.to);
 
     setEntryData({
-        "from": fromData.ayahCount,
-        "to": toData.ayahCount,
-        "from-surah": fromData.surahName,
-        "to-surah": toData.surahName
+        "from": fromData?.ayahCount,
+        "to": toData?.ayahCount,
+        "from-surah": fromData?.surahName,
+        "to-surah": toData?.surahName
     })
 
   }, []);
