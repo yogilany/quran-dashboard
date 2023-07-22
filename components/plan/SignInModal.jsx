@@ -47,11 +47,11 @@ const SignInModal = ({ isOpen, onClose, plan }) => {
           <div className="fixed inset-0 bg-neutral-800 opacity-75"></div>
 
           <div className="relative w-full max-w-md max-h-full">
-            <div className="relative bg-white rounded-lg shadow dark:bg-neutral-700">
+            <div className="relative rounded-lg shadow  bg-neutral-700">
               <button
                 onClick={closeModal}
                 type="button"
-                className=" absolute top-3 right-2.5 text-neutral-300 bg-transparent hover:bg-neutral-200 hover:text-neutral-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-neutral-600 dark:hover:text-white"
+                className=" absolute top-3 right-2.5 text-neutral-300 bg-transparent  rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center  hover:bg-neutral-600  hover:text-white"
                 data-modal-hide="popup-modal"
               >
                 <svg
@@ -73,7 +73,7 @@ const SignInModal = ({ isOpen, onClose, plan }) => {
               </button>
               <div className="p-6 text-center">
                 <svg
-                  className="mx-auto mb-4 text-neutral-400 w-12 h-12 dark:text-neutral-200"
+                  className="mx-auto mb-4 w-12 h-12  text-neutral-200"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ const SignInModal = ({ isOpen, onClose, plan }) => {
                   onClick={() => signIn(provider.id)}
                   data-modal-hide="popup-modal"
                   type="button"
-                  className="mx-2 font-readex text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                  className="mx-2 font-readex text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none  focus:ring-teal-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
                 >
                   تسجيل الدخول
                 </button>
@@ -105,7 +105,7 @@ const SignInModal = ({ isOpen, onClose, plan }) => {
                   onClick={closeModal}
                   data-modal-hide="popup-modal"
                   type="button"
-                  className="mx-2 font-readex text-neutral-500 bg-white hover:bg-neutral-100 focus:ring-4 focus:outline-none focus:ring-neutral-200 rounded-lg border border-neutral-200 text-sm font-medium px-5 py-2.5 hover:text-neutral-900 focus:z-10 dark:bg-neutral-700 dark:text-neutral-300 dark:border-neutral-500 dark:hover:text-white dark:hover:bg-neutral-600 dark:focus:ring-neutral-600"
+                  className="mx-2 font-readex  focus:ring-4 focus:outline-none rounded-lg border  text-sm font-medium px-5 py-2.5  focus:z-10  bg-neutral-700  text-neutral-300  border-neutral-500  hover:text-white  hover:bg-neutral-600  focus:ring-neutral-600"
                 >
                   إلغاء
                 </button>

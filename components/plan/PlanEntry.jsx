@@ -69,8 +69,8 @@ if(res.status==200){
 
   return (
     <div
-      className={`font-readex h-32 text-xs md:text-sm text-right text-neutral-400  border-b w-full px-2  sm:px-2 md:px-8   dark:border-neutral-700  ${
-        day.task == "أجازة" ? "dark:bg-neutral-800s" : "dark:bg-neutral-800s"
+      className={`font-readex h-32 text-xs md:text-sm text-right text-neutral-400  border-b w-full px-2  sm:px-2 md:px-8    border-neutral-700  ${
+        day.task == "أجازة" ? " bg-neutral-800s" : " bg-neutral-800s"
       } `}
     >
       <h1 className="py-4 text-light text-xs text-yellow-500"> {getDateAfterDays(day.day) }</h1>
@@ -78,7 +78,7 @@ if(res.status==200){
         <div className="flex flex-col w-full">
           <h1
             scope="row"
-            className="font-medium ml-8 text-neutral-900 whitespace-nowrap dark:text-white"
+            className="font-medium ml-8  whitespace-nowrap  text-white"
           >
             <span
               className={`text-md font-medium px-4 py-2 rounded-xl ${

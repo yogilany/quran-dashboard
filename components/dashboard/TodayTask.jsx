@@ -120,7 +120,7 @@ const TodayTask = ({ plan, fetchPlan }) => {
       <button
         onClick={handleDone}
         type="button"
-        className=" font-readex my-4 text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800"
+        className=" font-readex my-4 text-yellow-100   focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800"
       >
        {
         isLoading ? "جاري التسجيل..." : " أنهيت المهمة"

@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="md:flex md:justify-end">
         {/* <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase  text-white">
                 Resources
               </h2>
-              <ul className="text-neutral-600 dark:text-neutral-400">
+              <ul className="text-neutral-600  text-neutral-400">
                 <li className="mb-4">
                   <a href="https://flowbite.com/" className="hover:underline">
                     Flowbite
@@ -26,10 +26,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase  text-white">
                 Follow us
               </h2>
-              <ul className="text-neutral-600 dark:text-neutral-400 text-right">
+              <ul className="text-neutral-600  text-neutral-400 text-right">
                 <li className="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
@@ -49,10 +49,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-neutral-900 uppercase  text-white">
                 Legal
               </h2>
-              <ul className="text-neutral-600 dark:text-neutral-400">
+              <ul className="text-neutral-600  text-neutral-400">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
                     Privacy Policy
@@ -69,9 +69,9 @@ const Footer = () => {
          <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
             
-              <span className="font-readex  self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="font-readex  self-center text-xl font-semibold whitespace-nowrap  text-white">
             قـــــــراَن |{" "}
-            <span className=" font-readex text-xl font-light whitespace-nowrap dark:text-teal-300">
+            <span className=" font-readex text-xl font-light whitespace-nowrap  text-teal-300">
               داشبورد
             </span>
           </span>
@@ -79,9 +79,9 @@ const Footer = () => {
           </div>
       
         </div>
-        <hr className="my-6 border-neutral-200 sm:mx-auto dark:border-neutral-700 lg:my-8" />
+        <hr className="my-6 sm:mx-auto  border-neutral-700 lg:my-8" />
         <div className="text-left sm:flex sm:items-center sm:justify-between">
-          <span className="text-xs text-neutral-500 sm:text-center dark:text-neutral-400">
+          <span className="text-xs  sm:text-center  text-neutral-400">
             This Website is designed and developed by{" "}
             <a target="_blank" href="https://yousefgilany.com/" className="hover:underline text-neutral-400">
               YOUSEF GILANY
@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
               href="#"
-              className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
+              className="text-neutral-500   hover:text-white"
             >
               <svg
                 className="w-5 h-5"

@@ -71,44 +71,44 @@ const Hero = ({plan,fetchPlan}) => {
       </h1>
 
 {plan ? <div>
-      <dl className="font-readex grid  grid-cols-1 xl:grid-cols-2  md:grid-cols-2 gap-4  mx-auto text-gray-900  dark:text-white ">
+      <dl className="font-readex grid  grid-cols-1 xl:grid-cols-2  md:grid-cols-2 gap-4  mx-auto  text-white ">
 
 <CurrentPlan lengthOfPlan={plan?.length} />   
 <TodayTask plan={plan} fetchPlan={fetchPlan}/>
 
    </dl>
 
-      <dl className="font-readex grid max-w-screen-xl grid-cols-2 gap-4  mx-auto text-gray-900 sm:grid-cols-2 xl:grid-cols-2 dark:text-white ">
+      <dl className="font-readex grid max-w-screen-xl grid-cols-2 gap-4  mx-auto  sm:grid-cols-2 xl:grid-cols-2  text-white ">
         <div className=" text-center flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500 dark:text-gray-400 mb-4">
+          <dd className="text-center text-gray-500  text-gray-400 mb-4">
             عدد الايات التي تم حفظها
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.MemVer}</dt>
         </div>
         <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500 dark:text-gray-400 mb-4">
+          <dd className="text-center text-gray-500  text-gray-400 mb-4">
             عدد الايات التي تم مراجعتها
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.RevVer}</dt>
         </div>
         <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500 dark:text-gray-400 mb-4">
+          <dd className="text-center text-gray-500  text-gray-400 mb-4">
            عدد الأيام المتبقية 
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.RestDays}</dt>
         </div>
         <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500 dark:text-gray-400 mb-4">
+          <dd className="text-center text-gray-500  text-gray-400 mb-4">
             أنهيت من الخطة
           </dd>
           <dt className=" text-3xl font-extrabold">{(insights?.DoneDays)}</dt>
         </div>
       </dl>
 
-      <a href="/dailylog"    type="button" className="flex w-full font-readex text-center items-center justify-center my-4 text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5  mb-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800 h-16">تابع سجلك اليومي</a>
+      <a href="/dailylog"    type="button" className="flex w-full font-readex text-center items-center justify-center my-4 text-yellow-100focus:ring-4 font-medium rounded-lg text-sm px-5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800 h-16">تابع سجلك اليومي</a>
 </div> : <div className="flex flex-col justify-center items-center">
   <h1 className="font-readex text-2xl font-light text-neutral-400">لم تقم بإنشاء خطة بعد</h1>
-  <a href="/plan"    type="button" className="flex w-full font-readex text-center items-center justify-center my-4 text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5  mb-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800 h-16">أنشئ خطة</a>
+  <a href="/plan"    type="button" className="flex w-full font-readex text-center items-center justify-center my-4 text-yellow-100  focus:ring-4 font-medium rounded-lg text-sm px-5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800 h-16">أنشئ خطة</a>
   </div>
 }
     </section>

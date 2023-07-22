@@ -22,16 +22,16 @@ useEffect(() => {
   return (
     <section className="py-20 bg-center max-h-full h-full  ">
     <div className="py-8 px-4 mx-auto max-w-screen-xl min-h-max text-center lg:py-16 lg:px-8">
-      <h1 className=" font-readex mb-6 mt-8 text-4xl font-extrabold  text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+      <h1 className=" font-readex mb-6 mt-8 text-4xl font-extrabold   md:text-5xl lg:text-6xl  text-white">
           قرآن داشبورد
       </h1>
-      <p className=" font-readex mb-8 text-xl font-light text-gray-500 lg:text-xl dark:text-gray-400">
+      <p className=" font-readex mb-8 text-xl font-light lg:text-xl  text-gray-400">
         قم ببناء خطة التحفيظ المناسبة لك و لوقتك، و تابع تقدمك يومياً
       </p>
       <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
         {/* <a
           href="#"
-          className="text-sm font-readex inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-300 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+          className="text-sm font-readex inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-300 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300  focus:ring-primary-900"
         >
           أنشئ حسابك
           <svg
@@ -50,7 +50,7 @@ useEffect(() => {
         <Link href="/plan">
           <button
             type="button"
-            className="font-readex text-white bg-gradient-to-r from-teal-500  to-teal-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:teal-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            className="font-readex text-white bg-gradient-to-r from-teal-500  to-teal-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300  focus:teal-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
             قم ببناء خطتك الان
           </button>
@@ -62,7 +62,7 @@ useEffect(() => {
         <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
           <a
             href="#"
-            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800  hover:text-gray-400"
           >
             <svg
               className="h-8"
@@ -110,7 +110,7 @@ useEffect(() => {
           </a>
           <a
             href="#"
-            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800  hover:text-gray-400"
           >
             <svg
               className="h-11"
@@ -134,7 +134,7 @@ useEffect(() => {
           </a>
           <a
             href="#"
-            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+            className="mr-5 mb-5 lg:mb-0 hover:text-gray-800  hover:text-gray-400"
           >
             <svg
               className="h-11"

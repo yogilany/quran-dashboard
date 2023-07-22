@@ -69,7 +69,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
       <div className="pt-8 px-4 mx-auto max-w-screen-xl min-h-max text-center lg:pt-16 lg:px-12">
       <h1 className=" font-readex mb-4  text-lg leading-10 md:text-2xl lg:text-2xl font-light text-neutral-400">
 أنشئ خطة التحفيظ الخاصة بك أولاً        </h1>
-        <h1 className=" font-readex mb-12 mt-8 text-2xl leading-10 md:text-4xl lg:text-4xl font-extrabold  text-neutral-900  dark:text-white">
+        <h1 className=" font-readex mb-12 mt-8 text-2xl leading-10 md:text-4xl lg:text-4xl font-extrabold   text-white">
           ما المدة التقريبية التي ترغب في حفظ القرآن فيها؟
         </h1>
 
@@ -98,7 +98,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
           />
         </div>
 
-        <div className="mt-4  border-neutral-200 dark:border-neutral-700  ">
+        <div className="mt-4    border-neutral-700  ">
           <div className="text-center flex flex-col justify-center items-center mb-4">
             <h1 className="   text-lg font-normal px-4 py-4 font-readex text-neutral-400">
               أو حدد المدة التي ترغب بها
@@ -110,7 +110,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
             <div className="flex flex-col  text-center mr-20 mt-4 w-48 mx-4  ">
               <label
                 htmlFor="years"
-                className=" font-readex w-32 mb-2 text-sm font-medium text-neutral-900 dark:text-white"
+                className=" font-readex w-32 mb-2 text-sm font-medium  text-white"
               >
                 عدد السنين
               </label>
@@ -121,14 +121,14 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
                 id="years"
                 value={years}
                 aria-describedby="helper-text-explanation"
-                className=" font-readex bg-neutral-50 border text-center border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32 p-2.5  dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" font-readex  border text-center   text-sm rounded-lg block w-32 p-2.5   bg-neutral-700  border-neutral-600  placeholder-neutral-400  text-white  focus:ring-blue-500  focus:border-blue-500"
                 placeholder="٢"
               />
             </div>
             <div className="flex flex-col text-center ml-20 my-4 w-48 mx-4 ">
               <label
                 htmlFor="months"
-                className=" font-readex w-32 block mb-2 text-sm font-medium text-neutral-900 dark:text-white"
+                className=" font-readex w-32 block mb-2 text-sm font-medium   text-white"
               >
                 عدد الأشهر
               </label>
@@ -140,7 +140,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
                 id="months"
                 value={months}
                 aria-describedby="helper-text-explanation"
-                className="font-readex bg-neutral-50 border text-center border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-32  p-2.5  dark:bg-neutral-700 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="font-readex  border text-center  text-sm rounded-lg block w-32  p-2.5   bg-neutral-700  border-neutral-600  placeholder-neutral-400  text-white  focus:ring-blue-500  focus:border-blue-500"
                 placeholder="٤"
               />
             </div>
@@ -154,7 +154,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
               setIsLoading(true);
               handleGenerate();}}
             type="button"
-            className="font-readex  text-white bg-gradient-to-br from-teal-700 to-teal-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-0 dark:focus:bg-neutral-600 focus:bg-neutral-600 font-normal rounded-2xl text-lg px-8 py-4 text-center  mb-2"
+            className="font-readex  text-white bg-gradient-to-br from-teal-700 to-teal-400 hover:bg-gradient-to-bl focus:outline-none focus:ring-blue-300  focus:ring-0   focus:bg-neutral-600 font-normal rounded-2xl text-lg px-8 py-4 text-center  mb-2"
           >
             إنشاء الخطة
           </button> 

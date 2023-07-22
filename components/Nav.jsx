@@ -59,7 +59,7 @@ const Nav = () => {
         <div className=" font-readex text-xl font-light whitespace-nowrap text-teal-500">
 
           قـــــــراَن {" "}
-          <span className="font-readex  self-center text-xl font-medium whitespace-nowrap dark:text-white">
+          <span className="font-readex  self-center text-xl font-medium whitespace-nowrap text-white">
               داشبورد
             </span>
           </div>
@@ -177,7 +177,7 @@ const Nav = () => {
               </div>
               {toggleDropdown && (
               <div className="dropdown " ref={ref}>
-                <div className="py-3 text-sm text-gray-900 dark:text-white">
+                <div className="py-3 text-sm text-white">
                   <Link href={`/profile/${session?.user.id}`}>
                     {/* <Image
                       src={session?.user?.image}

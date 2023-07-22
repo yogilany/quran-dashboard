@@ -93,7 +93,7 @@ const Result = ({ plan }) => {
         id="section-1"
         className="py-8 px-0 md:px-4 mx-auto max-w-screen-xl min-h-max text-right lg:py-16 lg:px-12"
       >
-        <h1 className=" font-readex mb-4 mt-8 text-6xl md:text-8xl font-extrabold  text-neutral-900  dark:text-white">
+        <h1 className=" font-readex mb-4 mt-8 text-6xl md:text-8xl font-extrabold     text-white">
           خطة التحفيظ
         </h1>
         <h1 className=" font-readex mb-4 mt-8 text-2xl md:text-4xl font-medium  text-teal-400">
@@ -112,14 +112,14 @@ const Result = ({ plan }) => {
         <button
           onClick={openModal}
           type="button"
-          className="block font-readex text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-8 py-4  my-8 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800"
+          className="block font-readex text-yellow-100  focus:ring-4  font-medium rounded-lg text-md px-8 py-4  my-8  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800"
         >
          {
           isloading ? "جاري التحميل..." : " تسجيل الخطة"
          }
         </button>
 
-        <div className="mt-4  border-neutral-200 dark:border-neutral-700 ">
+        <div className="mt-4   border-neutral-700 ">
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           
             {plan.map((day,index) => {

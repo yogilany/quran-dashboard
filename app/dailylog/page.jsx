@@ -40,8 +40,8 @@ const DailyLog = () => {
 
   return (
     <div className="flex flex-col w-full  ">
-     <div className="mt-4  border-neutral-200 dark:border-neutral-700 ">
-     <h1 className=" font-readex mb-4 mt-8 text-6xl md:text-8xl font-extrabold  text-neutral-900  dark:text-white">
+     <div className="mt-4  border-neutral-200  border-neutral-700 ">
+     <h1 className=" font-readex mb-4 mt-8 text-6xl md:text-8xl font-extrabold  text-neutral-900   text-white">
           السجل اليومي
         </h1>
         <h1 className=" font-readex mb-4 mt-8 text-2xl md:text-4xl font-medium  text-teal-400">
@@ -51,7 +51,7 @@ const DailyLog = () => {
         <a
         href="/dashboard"
           type="button"
-          className="flex text-center w-fit cursor-pointer justify-center font-readex text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-8 py-4  my-8 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800"
+          className="flex text-center w-fit cursor-pointer justify-center font-readex text-yellow-100 bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-8 py-4  my-8  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800"
         >
          داشبـــــــورد
         </a>
@@ -59,7 +59,7 @@ const DailyLog = () => {
             {isLoading ? <div role="status" className=" flex-1 justify-start   text-center   break-inside-avoid rounded-lg   bg-clip-padding px-12 py-4  backdrop-blur-lg backdrop-filter  w-full h-fit">
           <svg
             aria-hidden="true"
-            className="inline w-24 h-24 mr-2 text-gray-200 animate-spin dark:text-neutral-600 fill-teal-500"
+            className="inline w-24 h-24 mr-2 text-gray-200 animate-spin  text-neutral-600 fill-teal-500"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

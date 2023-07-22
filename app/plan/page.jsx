@@ -38,7 +38,7 @@ const Plan = () => {
     return (
       <div className="flex flex-col w-full  ">
       <div
-        className="py-8 px-0 md:px-4 lg:px-4  max-w-screen-xl min-h-max text-right lg:py-16 lg:px-12"
+        className="py-8 px-0 md:px-4  max-w-screen-xl min-h-max text-right lg:py-16 lg:px-12"
       >
       <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -46,7 +46,7 @@ const Plan = () => {
        {isLoading ?  <div role="status" className=" flex-1   text-center   break-inside-avoid rounded-lg   bg-clip-padding px-12 py-4  backdrop-blur-lg backdrop-filter  w-full h-fit">
           <svg
             aria-hidden="true"
-            className="inline w-24 h-24 mr-2 text-gray-200 animate-spin dark:text-neutral-600 fill-teal-500"
+            className="inline w-24 h-24 mr-2  animate-spin text-neutral-600 fill-teal-500"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
