@@ -42,7 +42,7 @@ const RegisterPlanModal = ({
         throw Error(json.message);
       } else {
         // setPost({content: '', tag: '', isHidden: false})
-        router.push("/");
+        router.push("/dashboard");
         router;
       }
     } catch (e) {

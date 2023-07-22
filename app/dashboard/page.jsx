@@ -15,7 +15,7 @@ const Dashboard = () => {
 React.useEffect(() => {
   // checks if the user is authenticated
   session
-  ? plan ? router.push("/dashboard") : router.push("/plan")
+  ?  router.push("/dashboard")
   : router.push("/");
 }, [session]);
 
@@ -50,6 +50,8 @@ useEffect(() => {
   return (
     <div className="flex flex-col  ">
     {/* <div className="gradient"></div> */}
+    
+
 
     <Hero plan={plan} fetchPlan={fetchPlan} />
   </div>
