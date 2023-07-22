@@ -66,6 +66,9 @@ const TodayTask = ({ plan, fetchPlan }) => {
             const fromData = getSurahInfo(day.from);
             const toData = getSurahInfo(day.to);
 
+            console.log("from data", fromData);
+            console.log("to data", toData);
+
             setEntryData({
               from: fromData?.ayahCount,
               to: toData?.ayahCount,
