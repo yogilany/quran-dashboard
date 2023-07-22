@@ -45,7 +45,7 @@ const DailyLog = () => {
           السجل اليومي
         </h1>
         <h1 className=" font-readex mb-4 mt-8 text-2xl md:text-4xl font-medium  text-teal-400">
-        لخطة التحفيظ خلال <span className="text-white">700</span>{" "}
+        لخطة التحفيظ خلال <span className="text-white">{plan?.length}</span>{" "}
           يوم{" "}
         </h1>
         <a
