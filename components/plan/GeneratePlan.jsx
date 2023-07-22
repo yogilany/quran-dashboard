@@ -67,6 +67,8 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
   return (
     <section className="pt-8 bg-center   ">
       <div className="pt-8 px-4 mx-auto max-w-screen-xl min-h-max text-center lg:pt-16 lg:px-12">
+      <h1 className=" font-readex mb-4  text-lg leading-10 md:text-2xl lg:text-2xl font-light text-neutral-400">
+أنشئ خطة التحفيظ الخاصة بك أولاً        </h1>
         <h1 className=" font-readex mb-12 mt-8 text-2xl leading-10 md:text-4xl lg:text-4xl font-extrabold  text-neutral-900  dark:text-white">
           ما المدة التقريبية التي ترغب في حفظ القرآن فيها؟
         </h1>

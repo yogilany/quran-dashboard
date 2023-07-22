@@ -12,29 +12,12 @@ function getArabicHijriDate() {
   console.log("date",hijriDate)
   return hijriDate;
 }
-const Hero = () => {
+const Hero = ({plan,fetchPlan}) => {
 
   const { data: session } = useSession();
   const [userID, setUserId] = useState(session?.user.id)
-  const [plan, setPlan] = useState(null)
   const [insights,setInsights] = useState({Rev: null, Mem: null, RevVer: null, MemVer: null, DoneDays: null, RestDays: null})
   
-  const fetchPlan = async () => {
-  
-    var url = "/api/plan";
-    var params = {
-      userID: session?.user?.id,
-    };
-    var queryString = Object.keys(params).map(key => key + '=' + encodeURIComponent(params[key])).join('&');
-    url = url + '?' + queryString;
-
-  const res = await fetch(url);
-
-  // const res = await fetch(`/api/plan/${session?.user.id}`);
-  const data = await res.json();
-  setPlan(data[0]?.plan);
-  console.log("DATA",data[0])
-  }
 
   function countCompletedTasksWithKeyword(plan) {
     let MemoDoneDays = 0;
@@ -60,14 +43,6 @@ const Hero = () => {
   
     return {Mem: MemoDoneDays, Rev:RevDoneDay, MemVer:MemoDoneVerses , RevVer:RevDoneVerses };
   }
-  
-  useEffect(() => {
-    if(!plan){
-      fetchPlan();
-
-    }
-   
-  },[session])
 
 
   useEffect(()=>{
