@@ -3,7 +3,7 @@
 import { formatDateToArabic, getDateAfterDays, getSurahInfo } from "@/app/plan/plan.service";
 import React, { useEffect, useState } from "react";
 
-const PlanEntry = ({ day,session,isRegistered }) => {
+const PlanEntry = ({date_created, day,session,isRegistered }) => {
 
 
   const [isLoading,setIsLoading] = useState(false)
@@ -16,7 +16,7 @@ const PlanEntry = ({ day,session,isRegistered }) => {
   })
 
   const handleDone = async () => {
-    console.log("set load true")
+    // console.log("set load true")
     setIsLoading(true);
 
     await updateDone();
@@ -30,7 +30,7 @@ const PlanEntry = ({ day,session,isRegistered }) => {
       dayToFind: day.day,
       doneValue: !day.done,
     };
-    console.log("test params", params)
+    // console.log("test params", params)
 
     var queryString = Object.keys(params)
       .map((key) => key + "=" + encodeURIComponent(params[key]))
@@ -42,9 +42,9 @@ const PlanEntry = ({ day,session,isRegistered }) => {
     // const res = await fetch(`/api/plan/${session?.user.id}`);
     // const data = await res;
     //   setPlan(data[0]?.plan);
-      console.log("result",res.status)
+      // console.log("result",res.status)
       // fetchPlan();
-      console.log("set load false")
+      // console.log("set load false")
 
     setIsLoading(false);
 if(res.status==200){
@@ -56,8 +56,8 @@ if(res.status==200){
 
     const fromData = getSurahInfo(day.from);
     const toData = getSurahInfo(day.to);
-    console.log("from data", fromData);
-    console.log("to data", toData);
+    // console.log("from data", fromData);
+    // console.log("to data", toData);
     setEntryData({
         "from": fromData?.ayahCount,
         "to": toData?.ayahCount,
@@ -73,7 +73,7 @@ if(res.status==200){
         day.task == "أجازة" ? " bg-neutral-800s" : " bg-neutral-800s"
       } `}
     >
-      <h1 className="py-4 text-light text-xs text-yellow-500"> {getDateAfterDays(day.day) }</h1>
+      <h1 className="py-4 text-light text-xs text-yellow-500"> {getDateAfterDays(day.day,date_created) }</h1>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col w-full">
           <h1

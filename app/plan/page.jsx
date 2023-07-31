@@ -13,9 +13,7 @@ const Plan = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [btn, setBtn] = useState("generate");
 
-  useEffect(() => {
-    console.log("length",plan.length);
-  })
+
 
 
 

@@ -26,13 +26,13 @@ const TodayTask = ({ plan, fetchPlan }) => {
   
   const handleUndo = async () => {
     setIsLoading(true);
-    console.log("in undo")
+    // console.log("in undo")
     await updateDone("undo");
   };
   const updateDone = async (type) => {
 
     setUndoTodayTask(todayTask);
-    console.log("type",type)
+    // console.log("type",type)
 
 
     var url = "/api/plan/checkday";
@@ -66,8 +66,8 @@ const TodayTask = ({ plan, fetchPlan }) => {
             const fromData = getSurahInfo(day.from);
             const toData = getSurahInfo(day.to);
 
-            console.log("from data", fromData);
-            console.log("to data", toData);
+            // console.log("from data", fromData);
+            // console.log("to data", toData);
 
             setEntryData({
               from: fromData?.ayahCount,
@@ -94,16 +94,16 @@ const TodayTask = ({ plan, fetchPlan }) => {
         لقد أنهيت مهمة اليوم بنجاح.
       </h1>
       <h1 className="font-readex text-yellow-500 font-normal text-md">
-        كافئ نفسك بعصير برتقال طازج.
-      </h1>
+لا تنس قراءة ما حفظته في صلاتك اليوم.      </h1>
 
       <button
         onClick={handleUndo}
         type="button"
         className=" font-readex my-4 text-neutral-100  focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-teal-800"
       >
-        عودة
-      </button>
+{
+        isLoading ? "جاري التحميل..." : " إسترجاع المهمة"
+       }      </button>
     </div>
   ) : (
     <div className=" mb-4  flex py-4 px-8  bg-teal-800  border-teal-500 border-2 rounded-2xl  flex-col justify-center text-right ">
@@ -123,7 +123,7 @@ const TodayTask = ({ plan, fetchPlan }) => {
         className=" font-readex my-4 text-yellow-100   focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800"
       >
        {
-        isLoading ? "جاري التسجيل..." : " أنهيت المهمة"
+        isLoading ? "جاري التحميل..." : " أنهيت المهمة"
        }
       </button>
 

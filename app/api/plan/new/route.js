@@ -18,7 +18,8 @@ if (existingPlan) {
   // If no plan exists, create a new one
   existingPlan = new Plan({
     creator: userId,
-    plan: plan
+    plan: plan,
+    date_created: Date.now(),
   });
 }
 

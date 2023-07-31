@@ -5,7 +5,7 @@ import { connectToDatabase } from "@/utils/database";
 export const GET = async (req) => {
     try {
         await connectToDatabase();
-        console.log("done connect")
+        // console.log("done connect")
 
       // get a paramter sent in the url called ID
       const params = new URL(req.url).searchParams;
@@ -21,13 +21,13 @@ export const GET = async (req) => {
         { new: true } // Return the updated document
       );
 
-      console.log("GOT HER22")
+      // console.log("GOT HER22")
 
   
 
       
         if(updatedPlan){
-            console.log('Updated plan done');
+            // console.log('Updated plan done');
 
       return new Response(updatedPlan, {
         status: 200,

@@ -8,6 +8,10 @@ const PlanSchema = new Schema({
     plan:  {
         type: Schema.Types.Array,
     }, 
+    date_created: {
+        type: Date,
+        default: Date.now,
+    },
 
 
 

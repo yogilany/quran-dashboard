@@ -9,6 +9,8 @@ const DailyLog = () => {
   const { data: session } = useSession();
   const router = useRouter();
   const [plan, setPlan] = useState(null)
+  const [planDate, setPlanDate] = useState(null)
+
   const [isLoading,setIsLoading] = useState(true)
   const [_session,setSession] = useState(session)
 
@@ -24,15 +26,17 @@ const DailyLog = () => {
 
   const res = await fetch(url);
   const data = await res.json();
+  
   setPlan(data[0]?.plan);
+  setPlanDate(data[0]?.date_created)
   setIsLoading(false)
 
-  console.log("DATA",data[0])
+  // console.log("DATA",data[0])
   }
 
   useEffect(() => {
     if(!plan){
-    console.log("FETCHING")
+    // console.log("FETCHING")
     fetchPlan();
   }
   },[session])
@@ -76,7 +80,7 @@ const DailyLog = () => {
           <span className="sr-only">Loading...</span>
         </div>  : plan?.map((day,index) => {
               return (
-                <PlanEntry key={index} day={day} session={session} isRegistered={true} />
+                <PlanEntry date_created={planDate} key={index} day={day} session={session} isRegistered={true} />
               );
             }) }
 

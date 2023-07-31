@@ -9,6 +9,8 @@ import React, { useContext, useState, useEffect } from 'react'
 const Dashboard = () => {
   const { data: session } = useSession();
   const [plan, setPlan] = useState(null)
+  const [planDate, setPlanDate] = useState(null)
+
   const router = useRouter();
 
 
@@ -34,7 +36,8 @@ const res = await fetch(url);
 // const res = await fetch(`/api/plan/${session?.user.id}`);
 const data = await res.json();
 setPlan(data[0]?.plan);
-console.log("DATA",data[0])
+setPlanDate(data[0]?.date_created)
+// console.log("DATA",data[0])
 }
 
   
@@ -53,7 +56,7 @@ useEffect(() => {
     
 
 
-    <Hero plan={plan} fetchPlan={fetchPlan} />
+    <Hero planDate={planDate} plan={plan} fetchPlan={fetchPlan} />
   </div>
   )
 }

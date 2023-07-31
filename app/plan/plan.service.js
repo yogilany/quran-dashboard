@@ -16,7 +16,7 @@ export const generatePlan = (totalMonths) => {
     monthIndex * 24 * versesPerDay +
     pairMonthIndex * 48 * versesPerDay;
 
-  console.log("Generating");
+  // console.log("Generating");
   var currentEnd = 0;
 
   for (var pair = 0; pair < pairMonthsCount && quranVerses - currentEnd > 3; pair++) {
@@ -96,7 +96,7 @@ export const generatePlan = (totalMonths) => {
       // });
     }
 
-    console.log("TEST: month",month,"week",week,"day",day)
+    // console.log("TEST: month",month,"week",week,"day",day)
 
     for (var revisionDay = 0; revisionDay < 6 ; revisionDay++) {
       daysLog.push({
@@ -134,7 +134,7 @@ daysLog.push({
 
 }
 
-  console.log(daysLog);
+  // console.log(daysLog);
   return(daysLog);
 
 
@@ -156,8 +156,10 @@ export const formatDateToArabic = (date)  => {
     return formattedDate;
   };
 
-export function getDateAfterDays( daysToAdd) {
+export function getDateAfterDays( daysToAdd,date_created) {
+  // console.log("date_created",date_created)
     const startDate = new Date(); // Current date
+    // console.log("startDate",startDate)
 
     const date = new Date(startDate);
     date.setDate(date.getDate() + daysToAdd);

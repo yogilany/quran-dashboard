@@ -4,19 +4,20 @@ import AboutUs from "@/components/AboutUs";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 
 const Home = () => {
 
   const { data: session } = useSession();
   const router = useRouter();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
 
 useEffect(() => {
   // checks if the user is authenticated
   session
-  ? router.push("/dashboard")
-  : router.push("/");
+  ? setIsAuthenticated(true)
+  : null;
 }, [session]);
 
   return (
@@ -47,14 +48,20 @@ useEffect(() => {
             ></path>
           </svg>
         </a> */}
-        <Link href="/plan">
+        {isAuthenticated ?<Link href="/dashboard">
+          <button
+            type="button"
+            className="font-readex text-white bg-gradient-to-r from-teal-500  to-teal-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300  focus:teal-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+تابع خطتك الحالية          </button>
+        </Link> : <Link href="/plan">
           <button
             type="button"
             className="font-readex text-white bg-gradient-to-r from-teal-500  to-teal-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300  focus:teal-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
             قم ببناء خطتك الان
           </button>
-        </Link>
+        </Link>}
       </div>
 
       {/* <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">

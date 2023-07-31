@@ -50,7 +50,7 @@ const Result = ({ plan }) => {
 
     // const res = await fetch(`/api/plan/${session?.user.id}`);
     const data = await res.json();
-    console.log("ne dat", data);
+    // console.log("ne dat", data);
     setIsPlanFound(data);
   };
 

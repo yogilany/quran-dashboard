@@ -9,10 +9,10 @@ function getArabicHijriDate() {
   const now = new Date();
   const options = { calendar: "islamic", day: "numeric", month: "long", year: "numeric" };
   const hijriDate = new Intl.DateTimeFormat("ar-SA-u-ca-islamic", options).format(now);
-  console.log("date",hijriDate)
+  // console.log("date",hijriDate)
   return hijriDate;
 }
-const Hero = ({plan,fetchPlan}) => {
+const Hero = ({planDate,plan,fetchPlan}) => {
 
   const { data: session } = useSession();
   const [userID, setUserId] = useState(session?.user.id)
@@ -73,7 +73,7 @@ const Hero = ({plan,fetchPlan}) => {
 {plan ? <div>
       <dl className="font-readex grid  grid-cols-1 xl:grid-cols-2  md:grid-cols-2 gap-4  mx-auto  text-white ">
 
-<CurrentPlan lengthOfPlan={plan?.length} />   
+<CurrentPlan lengthOfPlan={plan?.length} planDate={new Date()} />   
 <TodayTask plan={plan} fetchPlan={fetchPlan}/>
 
    </dl>
@@ -97,12 +97,12 @@ const Hero = ({plan,fetchPlan}) => {
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.RestDays}</dt>
         </div>
-        <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
+        {/* <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
           <dd className="text-center text-gray-500  text-gray-400 mb-4">
             أنهيت من الخطة
           </dd>
-          <dt className=" text-3xl font-extrabold">{(insights?.DoneDays)}</dt>
-        </div>
+          <dt className=" text-3xl font-extrabold">{(insights?.DoneDays)} أيام</dt>
+        </div> */}
       </dl>
 
       <a href="/dailylog"    type="button" className="flex w-full font-readex text-center items-center justify-center my-4 text-yellow-100focus:ring-4 font-medium rounded-lg text-sm px-5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800 h-16">تابع سجلك اليومي</a>

@@ -34,7 +34,7 @@ const RegisterPlanModal = ({
       });
 
       const json = await res.json();
-      console.log("res status", res.status);
+      // console.log("res status", res.status);
       if (res.status === 500) {
         throw Error(json.message);
       }
