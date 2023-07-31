@@ -10,7 +10,7 @@ const TodayTask = ({ plan, fetchPlan }) => {
   const [isDone, setIsDone] = useState(false);
   const [todayTask, setTodayTask] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [undoTodayTask,setUndoTodayTask] = useState({})
+  const [undoTodayTask, setUndoTodayTask] = useState({});
 
   const [entryData, setEntryData] = useState({
     from: null,
@@ -23,17 +23,14 @@ const TodayTask = ({ plan, fetchPlan }) => {
     await updateDone("done");
   };
 
-  
   const handleUndo = async () => {
     setIsLoading(true);
     // console.log("in undo")
     await updateDone("undo");
   };
   const updateDone = async (type) => {
-
     setUndoTodayTask(todayTask);
     // console.log("type",type)
-
 
     var url = "/api/plan/checkday";
     var params = {
@@ -50,12 +47,9 @@ const TodayTask = ({ plan, fetchPlan }) => {
     const res = await fetch(url);
     fetchPlan();
 
-
     setIsLoading(false);
     setIsDone((isDone) => !isDone);
   };
-
-
 
   useEffect(() => {
     if (plan) {
@@ -94,16 +88,16 @@ const TodayTask = ({ plan, fetchPlan }) => {
         لقد أنهيت مهمة اليوم بنجاح.
       </h1>
       <h1 className="font-readex text-yellow-500 font-normal text-md">
-لا تنس قراءة ما حفظته في صلاتك اليوم.      </h1>
+        لا تنس قراءة ما حفظته في صلاتك اليوم.{" "}
+      </h1>
 
       <button
         onClick={handleUndo}
         type="button"
         className=" font-readex my-4 text-neutral-100  focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5  mb-2 bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-teal-800"
       >
-{
-        isLoading ? "جاري التحميل..." : " إسترجاع المهمة"
-       }      </button>
+        {isLoading ? "جاري التحميل..." : " إسترجاع المهمة"}{" "}
+      </button>
     </div>
   ) : (
     <div className=" mb-4  flex py-4 px-8  bg-teal-800  border-teal-500 border-2 rounded-2xl  flex-col justify-center text-right ">
@@ -114,17 +108,26 @@ const TodayTask = ({ plan, fetchPlan }) => {
         {todayTask.task}
       </h1>
       <h1 className="font-readex text-teal-100 font-light text-md">
-        من سورة {entryData["from-surah"]} - الاية رقم {entryData.from} إلى سورة{" "}
-        {entryData["to-surah"]} - الاية رقم {entryData.to}
+       
+        <span className="font-medium opacity-70">
+        من
+        سورة 
+        {" "}{entryData["from-surah"]} {" "}
+        </span>{" "}
+        - الاية رقم{" "}
+        {entryData.from}
+        <span className="font-medium opacity-70 ">
+        {" "}إلى سورة {" "}
+        {entryData["to-surah"]} {" "}
+        </span>
+        - الاية رقم {entryData.to}
       </h1>
       <button
         onClick={handleDone}
         type="button"
         className=" font-readex my-4 text-yellow-100   focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5  mb-2  bg-yellow-600  hover:bg-yellow-700 focus:outline-none  focus:ring-yellow-800"
       >
-       {
-        isLoading ? "جاري التحميل..." : " أنهيت المهمة"
-       }
+        {isLoading ? "جاري التحميل..." : " أنهيت المهمة"}
       </button>
 
       <h1 className="font-readex text-white font-light text-md"></h1>

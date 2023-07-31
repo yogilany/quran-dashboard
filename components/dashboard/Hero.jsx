@@ -80,20 +80,20 @@ const Hero = ({planDate,plan,fetchPlan}) => {
 
       <dl className="font-readex grid max-w-screen-xl grid-cols-2 gap-4  mx-auto  sm:grid-cols-2 xl:grid-cols-2  text-white ">
         <div className=" text-center flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500  text-gray-400 mb-4">
+          <dd className="text-center  text-gray-400 mb-4">
             عدد الايات التي تم حفظها
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.MemVer}</dt>
         </div>
         <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500  text-gray-400 mb-4">
+          <dd className="text-center   text-gray-400 mb-4">
             عدد الايات التي تم مراجعتها
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.RevVer}</dt>
         </div>
         <div className="flex flex-col items-center justify-center bg-neutral-700 border-neutral-500 border-2 rounded-2xl py-8 px-4">
-          <dd className="text-center text-gray-500  text-gray-400 mb-4">
-           عدد الأيام المتبقية 
+          <dd className="text-center   text-gray-400 mb-4">
+           عدد الأيام المتبقية في الخطة 
           </dd>
           <dt className=" text-3xl font-extrabold">{insights?.RestDays}</dt>
         </div>

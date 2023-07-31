@@ -84,7 +84,7 @@ const Footer = () => {
           <span className="text-xs  sm:text-center  text-neutral-400">
             This Website is designed and developed by{" "}
             <a target="_blank" href="https://yousefgilany.com/" className="hover:underline text-neutral-400">
-              YOUSEF GILANY
+              Yousef Gilany
             </a>
             
           </span>
