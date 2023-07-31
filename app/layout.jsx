@@ -6,6 +6,7 @@ import Provider from '@/components/Provider';
 export const metadata = {
     title: "قرآن داشبورد",
     description: "لحفظ أيسر",
+    themeColor: "#242424",
 }
 
 
