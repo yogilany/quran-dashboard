@@ -29,6 +29,14 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
     
   }
 
+  const ScrollToGenerate = () => {
+    const element = document.getElementById("generate-btn");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleClickScroll = () => {
     const element = document.getElementById("section-1");
     if (element) {
@@ -40,6 +48,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
 
 
   function handleDuration(e) {
+    ScrollToGenerate();
     switch (e) {
       case 6:
         setYears(6);
@@ -150,6 +159,7 @@ const GeneratePlan = ({ handleGeneration,setIsLoading }) => {
           </h1>
 
            <button
+           id="generate-btn"
             onClick={() => {    
               setIsLoading(true);
               handleGenerate();}}
